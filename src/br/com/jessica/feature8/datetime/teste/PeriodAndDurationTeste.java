@@ -1,9 +1,7 @@
 package br.com.jessica.feature8.datetime.teste;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.Period;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class PeriodAndDurationTeste {
     public static void main(String[] args) {
@@ -62,5 +60,16 @@ public class PeriodAndDurationTeste {
 
         Duration plusMin = between.plusMinutes(10);
         System.out.println(plusMin);
+
+        System.out.println("------CHRONOUNIT------");
+
+        LocalDateTime nascimento = LocalDateTime.of(1991,12,16,8,30);
+        LocalDateTime now = LocalDateTime.now();
+
+        System.out.println("Idade em dias: " + ChronoUnit.DAYS.between(nascimento, now));
+        System.out.println("Idade em semanas: " + ChronoUnit.WEEKS.between(nascimento, now));
+        System.out.println("Idade em meses: " + ChronoUnit.MONTHS.between(nascimento, now));
+        System.out.println("Idade em anos: " + ChronoUnit.YEARS.between(nascimento, now));
+
     }
 }
