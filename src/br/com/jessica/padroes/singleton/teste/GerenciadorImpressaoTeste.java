@@ -8,6 +8,7 @@ public class GerenciadorImpressaoTeste {
         GerenciadorImpressao g2 = GerenciadorImpressao.getInstance();
         GerenciadorImpressao g3 = GerenciadorImpressao.getInstance();
         GerenciadorImpressao g4 = GerenciadorImpressao.getInstance();
+        //GerenciadorImpressao g5 = new GerenciadorImpressao();
 
         System.out.println(g1);
         System.out.println(g2);

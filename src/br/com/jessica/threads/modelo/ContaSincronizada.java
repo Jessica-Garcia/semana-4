@@ -12,7 +12,7 @@ public class ContaSincronizada implements Runnable{
         if (conta.getSaldo() >= valor){
             System.out.println(Thread.currentThread().getName() + " está indo sacar");
             conta.saca(valor);
-            System.out.println(Thread.currentThread().getName() + " completou o saque:, saldo: " + conta.getSaldo());
+            System.out.println(Thread.currentThread().getName() + " completou o saque, saldo: " + conta.getSaldo());
         }
         else{
             System.out.println("Sem saldo para: " +
